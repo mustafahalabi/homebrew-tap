@@ -16,14 +16,6 @@ cask "agents-island" do
 
   app "AgentsIsland.app"
 
-  # Releases are ad-hoc signed (no Apple Developer ID yet); clear the
-  # quarantine flag so first launch doesn't hit the Gatekeeper dialog.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/AgentsIsland.app"],
-                   sudo: false
-  end
-
   uninstall quit: "dev.mustafa.agents-island"
 
   zap trash: [
