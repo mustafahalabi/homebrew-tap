@@ -12,16 +12,16 @@ cask "agents-island" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "AgentsIsland.app"
 
   uninstall quit: "dev.mustafa.agents-island"
 
   zap trash: [
+    "~/.claude/agents-island",
     "~/Library/Application Support/AgentsIsland",
     "~/Library/Preferences/dev.mustafa.agents-island.plist",
-    "~/.claude/agents-island",
   ]
 
   caveats <<~EOS
