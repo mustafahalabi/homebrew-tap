@@ -1,6 +1,6 @@
 cask "agents-island" do
-  version "0.4.9"
-  sha256 "06da5d8098e2eb8e8007f751ac47be764732e622c9d196c171b36a3f9e22f864"
+  version "0.5.0"
+  sha256 "a226a91b4177fa07ecb76e245bcbd89365d202a028027209580f4cce66ba9031"
 
   url "https://github.com/mustafahalabi/agents-island/releases/download/v#{version}/AgentsIsland.zip"
   name "Agents Island"
